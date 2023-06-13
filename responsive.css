@@ -1,0 +1,149 @@
+@media (max-width:480px){
+    .profile{
+    background-size:100% 100%;    
+    }
+    
+    #toogleMenu{
+        display:block;
+        margin-left:300px;
+        padding: 10px;
+    }
+    .header{
+      display:none;
+      float:center;
+      max-width:300px;
+      margin-left:130px;
+    }
+    #menu li{
+        padding: 20px;
+        margin:auto;
+        
+    }
+    #menu ul{
+        background-color:transparent;
+        max-width: fit-content;
+    }
+    #closeMenu{
+        margin:none;
+        float:right;
+        padding:10px;
+        color: darkgrey;
+        
+    }
+    
+    #profdiv{
+    display:inline-block;
+    padding:3px;
+    font-size:20px;
+    margin-left:0;
+    margin-top:140px;
+    }
+    
+    .tabservices,.tabportfolio,.tabblogs{
+        display: flex;
+        flex-direction: column;
+    }
+    .tabservices div,.tabportfoliodiv,.tabblogsdiv{
+        align-self: center;
+        margin:15px;
+    }
+       
+    #timelinediv:after{
+        left:10%;
+    }
+    .left::after{
+        margin-left:-65.5%;
+    }
+    .right::before{
+        margin-left:-65.5%;
+    }
+    .left{
+        left:16.5%
+    }
+    .right{
+        left:16.5%;
+    }
+    .container{
+        width:60%;
+    }
+    
+    .aboutdiv{
+        width:400px;
+    }
+    .connectmesun i{
+      margin-left:6px; 
+    }
+    .connectmesun strong{
+        font-size:20px
+    }
+    .connectmemoon i{
+      margin-left:6px; 
+    }
+    .connectmemoon strong{
+        font-size:20px
+    }
+    
+    .contactdiv{
+        margin-left:200px;
+        width:fit-content;
+    }
+    #followdrop{
+        margin-left:100px;
+        width:fit-content;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px){
+    #toogleMenu{
+        display:block;
+        margin-left:700px;
+        padding: 10px;
+    }
+    .header{
+      display:none;
+      max-width:300px;
+      margin-left: 500px;
+    }
+    #menu li{
+        padding: 15px;
+        margin:auto;
+    }
+    
+    #closeMenu{
+        margin:none;
+        float:right;
+        padding:10px;
+        color: darkgrey;
+        
+    }
+    
+    #profdiv{
+    display:inline-block;
+    padding:3px;
+    font-size:20px;
+    margin-left:200px;
+    margin-top:30px;
+    }
+    
+    .profile{
+        min-height:430px;
+    }
+    
+    .left{
+        left:21.6%;
+    }
+    .right{
+        left:58%;
+    }
+    
+    #followdrop{
+        margin-left:500px;
+    }
+    
+    .connectmesun i{
+        margin-left:60px
+    }
+     .connectmemoon i{
+        margin-left:60px
+    }
+}
