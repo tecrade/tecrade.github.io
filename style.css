@@ -359,21 +359,21 @@ color:#7a7aff;
     z-index:1;
 }
 
-.tabservicesdiv:hover,.tabservices button{
+.tabservicesdiv:hover,.tabservices button:hover{
   border-width:5px;
   border-color: #4942E4;
   border-style: solid;
   background-color:white;
   color:#4942E4;
 }
-.tabportfoliodiv:hover,.tabportfolio button{
+.tabportfoliodiv:hover,.tabportfolio button:hover{
     border-width:5px;
     border-color:#8696FE;
     border-style: solid;
     background-color:white;
     color: #8696FE;
   }
-  .tabblogsdiv:hover,.tabblogs button{
+  .tabblogsdiv:hover,.tabblogs button:hover{
     border-width:5px;
     border-color:#c4b0f4;
     border-style: solid;
