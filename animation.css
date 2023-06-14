@@ -22,7 +22,7 @@
    animation-direction: alternate;
 }
 
-.tabservicesdiv,.tabblogsdiv,.tabportfolio{
+.tabservicesdiv,.tabblogsdiv,.tabportfoliodiv{
    animation-name:floating;
    animation-duration:2s;
    animation-timing-function:ease-in-out;
