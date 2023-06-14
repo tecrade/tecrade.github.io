@@ -227,98 +227,115 @@ btntheme.onclick=function(){
 if(screen.width<=480){
     document.getElementsByClassName("tabservicesdiv")[2].style.display="none";
     document.getElementsByClassName("tabservicesdiv")[3].style.display="none";
+    document.getElementsByClassName("tabportfoliodiv")[2].style.display="none";
+    document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
+    document.getElementsByClassName("tabportfoliodiv")[2].style.display="none";
+    document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
+    document.getElementsByClassName("tabblogsdiv")[2].style.display="none";
+    document.getElementsByClassName("tabblogsdiv")[3].style.display="none";
+    
     btnshowMore[0].onclick=function(){
         if(flagService===0){
         document.getElementsByClassName("tabservicesdiv")[2].style.display="block";
         document.getElementsByClassName("tabservicesdiv")[3].style.display="block";
         document.getElementsByClassName("btn showmore")[0].innerHTML="Show less";
+        document.getElementsByClassName("btn showmore")[0].style.backgroundColor="white";
+        document.getElementsByClassName("btn showmore")[0].style.color="#4942E4";
         flagService=1;
         }else if(flagService===1){
          document.getElementsByClassName("tabservicesdiv")[2].style.display="none";
          document.getElementsByClassName("tabservicesdiv")[3].style.display="none";
         document.getElementsByClassName("btn showmore")[0].innerHTML="Show more";
+        document.getElementsByClassName("btn showmore")[0].style.backgroundColor="#4942E4";
+        document.getElementsByClassName("btn showmore")[0].style.color="white";
         flagService=0;
         }
     }
+    btnshowMore[1].onclick=function(){
+      if(flagPortfolio===0){
+      document.getElementsByClassName("tabportfoliodiv")[2].style.display="block";
+      document.getElementsByClassName("tabportfoliodiv")[3].style.display="block";
+      document.getElementsByClassName("btn showmore")[1].innerHTML="Show less";
+      document.getElementsByClassName("btn showmore")[1].style.backgroundColor="white";
+      document.getElementsByClassName("btn showmore")[1].style.color="#8696FE";
+      flagPortfolio=1;
+      }else if(flagPortfolio===1){
+       document.getElementsByClassName("tabportfoliodiv")[2].style.display="none";
+       document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
+      document.getElementsByClassName("btn showmore")[1].innerHTML="Show more";
+      document.getElementsByClassName("btn showmore")[1].style.backgroundColor="#8696FE";
+      document.getElementsByClassName("btn showmore")[1].style.color="white";
+      flagPortfolio=0;
+      }
+  }
+  btnshowMore[2].onclick=function(){
+    if(flagBlogs===0){
+    document.getElementsByClassName("tabblogsdiv")[2].style.display="block";
+    document.getElementsByClassName("tabblogsdiv")[3].style.display="block";
+    document.getElementsByClassName("btn showmore")[2].innerHTML="Show less";
+    document.getElementsByClassName("btn showmore")[2].style.backgroundColor="#8696FE";
+    document.getElementsByClassName("btn showmore")[2].style.color="";
+    flagBlogs=1;
+    }else if(flagBlogs===1){
+     document.getElementsByClassName("tabblogsdiv")[2].style.display="none";
+     document.getElementsByClassName("tabblogsdiv")[3].style.display="none";
+    document.getElementsByClassName("btn showmore")[2].innerHTML="Show more";
+    document.getElementsByClassName("btn showmore")[2].style.backgroundColor="white";
+    document.getElementsByClassName("btn showmore")[2].style.color="#8696FE";
+    flagBlogs=0;
+    }
+}
 }else{
     document.getElementsByClassName("tabservicesdiv")[3].style.display="none";
+    document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
+    document.getElementsByClassName("tabblogsdiv")[3].style.display="none";
+    
     btnshowMore[0].onclick=function(){
         if(flagService===0){
         document.getElementsByClassName("tabservicesdiv")[3].style.display="block";
         document.getElementsByClassName("btn showmore")[0].innerHTML="Show less";
+        document.getElementsByClassName("btn showmore")[0].style.backgroundColor="white";
+        document.getElementsByClassName("btn showmore")[0].style.color="#4942E4";
         flagService=1;
         }else if(flagService===1){
          document.getElementsByClassName("tabservicesdiv")[3].style.display="none";
         document.getElementsByClassName("btn showmore")[0].innerHTML="Show more";
+        document.getElementsByClassName("btn showmore")[0].style.backgroundColor="#4942E4";
+        document.getElementsByClassName("btn showmore")[0].style.color="white";
         flagService=0;
         }
     }
-}
-
-if(screen.width<=480){
-    document.getElementsByClassName("tabportfoliodiv")[2].style.display="none";
-    document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
-    btnshowMore[1].onclick=function(){
-        if(flagPortfolio===0){
-        document.getElementsByClassName("tabportfoliodiv")[2].style.display="block";
-        document.getElementsByClassName("tabportfoliodiv")[3].style.display="block";
-        document.getElementsByClassName("btn showmore")[1].innerHTML="Show less";
-        flagPortfolio=1;
-        }else if(flagPortfolio===1){
-         document.getElementsByClassName("tabportfoliodiv")[2].style.display="none";
-         document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
-        document.getElementsByClassName("btn showmore")[1].innerHTML="Show more";
-        flagPortfolio=0;
-        }
-    }
-}else{
-    document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
     btnshowMore[1].onclick=function(){
         if(flagPortfolio===0){
         document.getElementsByClassName("tabportfoliodiv")[3].style.display="block";
         document.getElementsByClassName("btn showmore")[1].innerHTML="Show less";
+        document.getElementsByClassName("btn showmore")[1].style.backgroundColor="white";
+        document.getElementsByClassName("btn showmore")[1].style.color="#8696FE";
         flagPortfolio=1;
         }else if(flagPortfolio==1){
          document.getElementsByClassName("tabportfoliodiv")[3].style.display="none";
         document.getElementsByClassName("btn showmore")[1].innerHTML="Show more";
+        document.getElementsByClassName("btn showmore")[1].style.backgroundColor="#8696FE";
+        document.getElementsByClassName("btn showmore")[1].style.color="white";
         flagPortfolio=0;
         }
     }
-}
-
-if(screen.width<=480){
-    document.getElementsByClassName("tabblogsdiv")[2].style.display="none";
-    document.getElementsByClassName("tabblogsdiv")[3].style.display="none";
-    btnshowMore[2].onclick=function(){
-        if(flagBlogs===0){
-        document.getElementsByClassName("tabblogsdiv")[2].style.display="block";
-        document.getElementsByClassName("tabblogsdiv")[3].style.display="block";
-        document.getElementsByClassName("btn showmore")[2].innerHTML="Show less";
-        flagBlogs=1;
-        }else if(flagBlogs===1){
-         document.getElementsByClassName("tabblogsdiv")[2].style.display="none";
-         document.getElementsByClassName("tabblogsdiv")[3].style.display="none";
-        document.getElementsByClassName("btn showmore")[2].innerHTML="Show more";
-        flagBlogs=0;
-        }
-    }
-}else{
-    document.getElementsByClassName("tabblogsdiv")[3].style.display="none";
     btnshowMore[2].onclick=function(){
         if(flagBlogs===0){
         document.getElementsByClassName("tabblogsdiv")[3].style.display="block";
         document.getElementsByClassName("btn showmore")[2].innerHTML="Show less";
+        document.getElementsByClassName("btn showmore")[2].style.backgroundColor="white";
+        document.getElementsByClassName("btn showmore")[2].style.color="#c4b0f4";
         flagBlogs=1;
         }else if(flagBlogs==1){
          document.getElementsByClassName("tabblogsdiv")[3].style.display="none";
         document.getElementsByClassName("btn showmore")[2].innerHTML="Show more";
+        document.getElementsByClassName("btn showmore")[2].style.backgroundColor="#c4b0f4";
+        document.getElementsByClassName("btn showmore")[2].style.color="white";
         flagBlogs=0;
         }
     }
 }
-
-
-
 
 
 btnfollow.onclick=function(){
