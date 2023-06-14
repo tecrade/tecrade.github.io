@@ -172,21 +172,21 @@ btntheme.onclick=function(){
         //section services
        document.getElementsByClassName("section services")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabservicesdiv").length;i++){
-      document.getElementsByClassName("tabservicesdiv")[i].style.backgroundColor="#772680";
+      document.getElementsByClassName("tabservicesdiv")[i].style.backgroundColor="#4942E4";
        }
      
      //section portfolio
      
      document.getElementsByClassName("section portfolio")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabportfoliodiv").length;i++){
-      document.getElementsByClassName("tabportfoliodiv")[i].style.backgroundColor="#4389cc";
+      document.getElementsByClassName("tabportfoliodiv")[i].style.backgroundColor="#8696FE";
        }
        
      //section blogs
      
      document.getElementsByClassName("section blogs")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabblogsdiv").length;i++){
-      document.getElementsByClassName("tabblogsdiv")[i].style.backgroundColor="#442aa3";
+      document.getElementsByClassName("tabblogsdiv")[i].style.backgroundColor="#c4b0f4";
        }
        
        document.getElementById("connectme").className="section connectmemoon";
@@ -199,23 +199,23 @@ btntheme.onclick=function(){
         
         //body
         //section services
-       document.getElementsByClassName("section services")[0].style.color="#772680";
+       document.getElementsByClassName("section services")[0].style.color="white";
        for(let i=0;i< document.getElementsByClassName("tabservicesdiv").length;i++){
-      document.getElementsByClassName("tabservicesdiv")[i].style.backgroundColor="#e8ebff";
+      document.getElementsByClassName("tabservicesdiv")[i].style.backgroundColor="#4942E4";
        }
        
        //section portfolio
      
-     document.getElementsByClassName("section portfolio")[0].style.color="#4389cc"; 
+     document.getElementsByClassName("section portfolio")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabportfoliodiv").length;i++){
-      document.getElementsByClassName("tabportfoliodiv")[i].style.backgroundColor="#eaf5fe";
+      document.getElementsByClassName("tabportfoliodiv")[i].style.backgroundColor="#8696FE";
        }
        
      //section blogs
      
-     document.getElementsByClassName("section blogs")[0].style.color="#442aa3"; 
+     document.getElementsByClassName("section blogs")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabblogsdiv").length;i++){
-      document.getElementsByClassName("tabblogsdiv")[i].style.backgroundColor="#eeeeff";
+      document.getElementsByClassName("tabblogsdiv")[i].style.backgroundColor="#c4b0f4";
        }
        
      document.getElementById("connectme").className="section connectmesun";
