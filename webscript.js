@@ -168,7 +168,7 @@ btntheme.onclick=function(){
         document.body.style.color="white";
         btntheme.className="fa fa-moon-o";  
         
-        //body
+       /* //body
         //section services
        document.getElementsByClassName("section services")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabservicesdiv").length;i++){
@@ -187,7 +187,7 @@ btntheme.onclick=function(){
      document.getElementsByClassName("section blogs")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabblogsdiv").length;i++){
       document.getElementsByClassName("tabblogsdiv")[i].style.backgroundColor="#c4b0f4";
-       }
+       }*/
        
        document.getElementById("connectme").className="section connectmemoon";
        
@@ -197,7 +197,7 @@ btntheme.onclick=function(){
         document.body.style.color="black";
         btntheme.className="fa fa-sun-o";  
         
-        //body
+     /*   //body
         //section services
        document.getElementsByClassName("section services")[0].style.color="white";
        for(let i=0;i< document.getElementsByClassName("tabservicesdiv").length;i++){
@@ -216,7 +216,7 @@ btntheme.onclick=function(){
      document.getElementsByClassName("section blogs")[0].style.color="white"; 
        for(let i=0;i< document.getElementsByClassName("tabblogsdiv").length;i++){
       document.getElementsByClassName("tabblogsdiv")[i].style.backgroundColor="#c4b0f4";
-       }
+       }*/
        
      document.getElementById("connectme").className="section connectmesun";
         
