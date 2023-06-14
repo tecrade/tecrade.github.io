@@ -206,8 +206,8 @@
     margin:auto;
 }
 
-
 .aboutdiv{
+
     font-size:20px;
     width:500px;
     margin:auto;
@@ -359,3 +359,32 @@ color:#7a7aff;
     z-index:1;
 }
 
+.tabservicesdiv:hover,.tabservices.btn.showmore{
+  border-width:5px;
+  border-color: #4942E4;
+  border-style: solid;
+  background-color:white;
+  color:#4942E4;
+}
+.tabportfoliodiv:hover,.tabportfolio.btn.showmore{
+    border-width:5px;
+    border-color:#8696FE;
+    border-style: solid;
+    background-color:white;
+    color: #8696FE;
+  }
+  .tabblogsdiv:hover,.tabblogs.btn.showmore{
+    border-width:5px;
+    border-color:#c4b0f4;
+    border-style: solid;
+    background-color:white;
+    color:#696897;
+  }
+
+  .container:hover{
+    border-width:5px;
+    border-color:#7a7aff;
+    border-style: solid;
+    background-color:white;
+    color:#7a7aff;
+  }
