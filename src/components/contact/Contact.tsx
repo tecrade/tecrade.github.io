@@ -6,7 +6,6 @@ import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     Aos.init();
@@ -36,7 +35,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setLoading(true);
     const templateParams = {
       name: form.name,
       email: form.email,
@@ -46,12 +44,10 @@ const Contact = () => {
       (response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert('Message sent successfully!');
-        setLoading(false)
         setForm({ name: '', email: '', message: '' });
       },
       (error) => {
         console.log('FAILED...', error);
-        setLoading(false)
       },
     );
   };
