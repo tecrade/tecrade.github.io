@@ -1,0 +1,14 @@
+@import '../../Color.css';
+
+/* Any additional styles that can't be handled by Tailwind can go here */
+.form-control {
+  background-color: transparent;
+  color: var(--light);
+  border: 2px solid transparent;
+}
+
+.form-control:focus {
+  border-color: var(--blue);
+  outline: none;
+  border-radius: 0.3rem;
+} 

@@ -1,0 +1,78 @@
+@import '../../Color.css';
+
+hr{
+   color: var(--light);
+}
+.row.banner{
+    background-color:var(--dark);
+}
+
+.picdiv{
+    height:500px;
+    width:300px;
+    border: 2px solid var(--light);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:2rem;
+    margin-bottom:2rem;
+}
+
+.namediv{
+    height:300px;
+    width:auto;
+    border: 2px solid transparent;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    line-height:5rem;
+    margin-right: auto;
+    margin-top:6rem;
+    margin-bottom:2rem;
+    color: var(--light);
+}
+.namediv h1{
+    margin-top:4rem;
+    font-size:60px;
+    letter-spacing:0.7rem;
+}
+.btn.connectme{
+    position: relative;
+    border: 2px solid var(--blue);
+    height: auto;
+    width: auto;
+    border: radius 0.3rem;
+    color: var(--blue);
+    z-index: 1;
+    box-shadow: 
+    0px 5px 15px rgba(9, 156, 242, 0.1), 
+    0px 10px 20px rgba(0, 91, 234, 0.1);
+}
+
+.btn.connectme::after{
+    content: "";
+    position: absolute;
+    height:100%;
+    width:30%;
+    background-color:transparent;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:-1;
+}
+.btn.connectme:hover:after{
+    width: 100%;
+    background-color: var(--blue);
+    transition:0.5s;
+}
+.btn.connectme:hover{
+    color: var(--light);
+}
+.title{
+    margin-top:2rem;
+    letter-spacing: 0.5rem;
+}
+
+.title h3 :nth-child(1){
+    color:var(--lightblue);
+}

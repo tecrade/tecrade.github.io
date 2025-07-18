@@ -1,0 +1,60 @@
+@import '../../Color.css';
+
+.container.contactcontainer{
+    color: var(--light);
+    font-family:'poppins',sans-serif;
+    font-size: larger;
+}
+.btn.contactbtn{
+  color: var(--blue);
+  font-size: larger;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid var(--blue);
+  position: relative;
+  z-index: 1;
+  box-shadow: 
+  0px 5px 15px rgba(9, 156, 242, 0.1), 
+  0px 10px 20px rgba(0, 91, 234, 0.1);
+}
+.btn.contactbtn::after{
+    content: "";
+    position: absolute;
+    height:100%;
+    width:30%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:-1;
+}
+.btn.contactbtn:hover::after{
+    width: 100%;
+    background-color:var(--blue);
+    transition:0.5s;
+}
+.btn.contactbtn:hover{
+    color: var(--light);
+}
+
+
+.contactdiv{
+    background-color:var(--dark);
+    border: 2px solid var(--lightblue);
+    border-radius:1rem;
+    padding:10px;
+    box-shadow: 
+    0px 10px 20px rgba(0, 91, 234, 0.1), 
+    0px 30px 30px rgba(212, 212, 222, 0.1), 
+    0px 30px 40px rgba(9, 156, 242, 0);
+}
+.contactdiv h1{
+    color: var(--blue);
+}
+
+.d-lg-none.footericon{
+    box-shadow: 
+    0px 5px 15px rgba(9, 156, 242, 0.1), 
+    0px 10px 20px rgba(0, 91, 234, 0.1);
+}

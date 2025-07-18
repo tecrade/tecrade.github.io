@@ -1,0 +1,11 @@
+@import '../../Color.css';
+.col-12.title{
+    text-align: cente;
+    color: var(--light);
+    margin-bottom:2rem;
+}
+.row.cards{
+    justify-content: center;
+}
+
+

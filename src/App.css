@@ -1,0 +1,7 @@
+@import './Color.css';
+
+body {
+  background-color: var(--dark);
+}
+
+/* App-specific styles can be added here */

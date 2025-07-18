@@ -1,0 +1,70 @@
+@import '../../Color.css';
+.navbar-nav.me-auto.mb-2.mb-lg-0{
+    margin-right:auto;
+    margin-left:auto;
+}
+.nav-item{
+    margin-left:auto;
+    margin-right:auto;
+    width:fit-content;
+}
+.nav-link,.navbar-brand{
+    color: var(--light);
+    border-width:0.2rem;
+    border-style:ridge;
+    border-color: transparent;
+    font-weight:bold;
+    padding: 0.5rem;
+    font-family: monospace;
+    position: relative;
+}
+.btn.search{
+    color: var(--light);
+    border-width:0.2rem;
+    border-style:ridge;
+    border-color: transparent;
+}
+.nav-link:hover,.nav-link:focus{
+    color: var(--blue);
+    border-radius:0.3rem;
+    border-width:0.2rem;
+    border-style:ridge;
+}
+.navbar-brand:hover{
+    color: var(--light);
+}
+.btn.search:hover{
+    color: var(--blue);
+    border-radius:0.3rem;
+    border-color: var(--blue);
+    border-width:0.2rem;
+    border-style:ridge;
+}
+.navbar-toggler{
+    color:var(--blue);
+} 
+.navbar-toggler:hover{
+    color: var(--blue);
+    border-color: var(--blue);
+    border-width:0.2rem;
+}
+
+.navbar.sticky-top.navbar-expand-lg.mynavbar-noscroll{
+    background-color: var(--dark);
+}
+.navbar.sticky-top.navbar-expand-lg.mynavbar-scroll{
+    background-color:rgba(10, 17, 24, 0.7);
+}
+
+.nav-link:focus::after{
+        position: absolute;
+        content: "";
+        width:100%;
+        height:0.2rem;
+        background-color: var(--blue);
+        left: 0;
+        right: 0;
+        top:100%;
+        bottom: 0;
+}
+

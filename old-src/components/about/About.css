@@ -1,0 +1,70 @@
+@import '../../Color.css';
+.aboutimg{
+    border-radius:50%;
+    border-style:double;
+    border:4px solid transparent;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 171px;
+    width: 180px;
+}
+
+/*.aboutimgdiv{
+    margin-top:2rem;
+    padding: 0.5rem;
+    height:fit-content;
+    width:fit-content;
+    border: 2px solid var(--blue);
+    border-radius:45%;
+    border-top:0px ;
+    border-bottom:0px;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    border-top-style: hidden;
+}*/
+
+.aboutme{
+    height:auto;
+    width:auto;
+    color: var(--light);
+    font-family:'poppins',sans-serif;
+    font-stretch: condensed;
+    border-radius:1%;
+    font-size:30px;
+    font-weight: 400;
+    border-style: none;
+    padding:40px;
+}
+
+.col-12.title{
+    text-align: center;
+    color: var(--blue);
+}
+
+.skilldiv{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    text-align: center;
+    min-height:200px;
+    color: var(--light);
+    border: 2px solid var(--lightblue);
+    margin-bottom: 3rem;
+    background-color:var(--dark);
+    border-radius:0.5rem;
+    box-shadow: 
+    0px 10px 20px rgba(0, 91, 234, 0.1), 
+    0px 30px 30px rgba(212, 212, 222, 0.1), 
+    0px 30px 40px rgba(9, 156, 242, 0);
+}
+
+.row.about{
+    justify-content: center;
+}
+
+.progressdiv{
+   padding-left:4rem;
+}

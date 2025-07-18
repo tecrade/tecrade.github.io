@@ -1,0 +1,93 @@
+@import '../../../Color.css';
+
+.sidebar {
+    position: fixed;
+    background-color: rgba(var(--dark-rgb), 0.6);
+    color: var(--blue);
+    height: 100%;
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0;
+    z-index: 1;
+}
+
+.sidebar i {
+    color: var(--blue);
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 5;
+    font-size: 25px;
+    box-shadow: 
+        0px 5px 15px rgba(9, 156, 242, 0.1), 
+        0px 10px 20px rgba(0, 91, 234, 0.1);
+}
+
+.menuicons {
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    column-gap: 3rem;
+}
+
+.menuicons i {
+    color: var(--blue);
+    border-radius: 50%;
+    border: 2px solid var(--blue);
+    height: fit-content;
+    width: fit-content;
+    padding: 5px;
+    position: relative;
+    font-size: larger;
+    box-shadow: 
+        0px 5px 15px rgba(9, 156, 242, 0.1), 
+        0px 10px 20px rgba(0, 91, 234, 0.1);
+}
+
+.sidebar i::after,
+.menuicons i::after {
+    content: "";
+    background-color: transparent;
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -2;
+}
+
+.sidebar i:hover::after,
+.menuicons i:hover::after {
+    width: 100%;
+    background-color: var(--blue);
+    transition: 0.5s;
+}
+
+.sidebar i:hover,
+.menuicons i:hover {
+    color: var(--light);
+}
+
+.menuicons i:focus,
+.sidebar i:focus {
+    background-color: var(--blue);
+    color: var(--light);
+} 

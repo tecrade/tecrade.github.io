@@ -1,0 +1,56 @@
+@import '../../../Color.css';
+
+.card-data{
+    text-align: center;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card.portfoliocard{
+    color: var(--blue);
+    border:4px solid var(--dark);
+    height: min-content;
+    width:min-content;
+    border-radius:4%;
+    margin-bottom:5rem;
+    box-shadow: 
+    0px 10px 20px rgba(0, 91, 234, 0.1), 
+    0px 20px 30px rgba(212, 212, 222, 0.1), 
+    0px 30px 40px rgba(9, 156, 242, 0.1);
+}
+
+.cardimage{
+    height:300px;
+    width: 300px;
+    background-color:var(--dark);
+    color: var(--light);
+    text-align:center;
+    position: relative;
+    border:2px solid transparent;
+    border-radius:0%;
+    font-family: monospace;
+}
+.cardimage i{
+    position: absolute;
+    font-size:90px;
+    top:70px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+.card-title{
+    position: absolute;
+    font-size:40px;
+    top:180px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.card.card.portfoliocard:hover{
+    border-color: var(--lightblue);
+}
+.cardimage:focus{
+    color: var(--lightblue);
+}
