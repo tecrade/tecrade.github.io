@@ -187,7 +187,7 @@ const About = () => {
           {/* Profile Image Column */}
           <div className="flex justify-center lg:justify-start">
   <img 
-    src="public/images/jovinbysora.webp" 
+    src="/images/jovinbysora.webp" 
     alt="Profile picture" 
     className="object-cover object-center rounded-full border-4 border-transparent h-[171px] w-[180px]" 
   />
