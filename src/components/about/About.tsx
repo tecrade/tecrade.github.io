@@ -10,12 +10,18 @@ import Contact from '../contact/Contact';
 const CircleProgress = ({
   iconclass,
   title,
-  percent,
+  level,
 }: {
   iconclass: string;
   title: string;
-  percent: number;
+  level: 'Extreme' | 'Efficient' | 'Moderate';
 }) => {
+  const percentMap = {
+    Extreme: 95,
+    Efficient: 80,
+    Moderate: 60,
+  };
+  const percent = percentMap[level];
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -25,22 +31,22 @@ const CircleProgress = ({
   }, [percent]);
 
   const size = 100;
-  const strokeWidth = 8;
+  const strokeWidth = 6;
   const radius = (size - strokeWidth) / 2;
   const circumference = 2 * Math.PI * radius;
   const offset = circumference - (progress / 100) * circumference;
 
   return (
-    <div className="relative inline-block m-5">
-      <svg width={size} height={size} className="block">
+    <div className="relative inline-block m-3 select-none">
+      <svg width={size} height={size} className="block transform -rotate-90">
         {/* Background circle */}
         <circle
           cx={size / 2}
           cy={size / 2}
           r={radius}
-          stroke="#fff"
+          stroke="rgba(255, 255, 255, 0.08)"
           strokeWidth={strokeWidth}
-          fill="black"
+          fill="transparent"
         />
         {/* Progress circle */}
         <circle
@@ -54,64 +60,99 @@ const CircleProgress = ({
           strokeDashoffset={offset}
           strokeLinecap="round"
           style={{
-            transition: 'stroke-dashoffset 1s ease',
+            transition: 'stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1)',
           }}
         />
       </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <i className={`${iconclass} mb-1`}></i>
-        <span className="text-sm">{title}</span>
-        <span className="text-xs mt-1">{percent}%</span>
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-1">
+        <i className={`${iconclass} text-lg mb-1 text-[var(--blue)]`}></i>
+        <span className="text-[11px] font-bold font-mono tracking-wide text-[var(--light)] truncate max-w-full uppercase">{title}</span>
+        <span className="text-[9px] text-[var(--light)]/50 mt-0.5 font-mono">{level}</span>
       </div>
     </div>
   );
 };
 
 
-// Timeline Component
 const Timeline = () => {
   const timelineData = [
     {
-      icon: 'fas fa-brain',
-      time: 'MAY 21',
-      date: '7:45PM',
-      content: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'
+      icon: 'fas fa-cake-candles',
+      time: '🎂 2004',
+      date: 'July 27, 2004',
+      content: 'Born in Kerala, India'
     },
     {
-      icon: 'fas fa-camera',
-      time: '8:00 AM',
-      date: 'May 18',
-      content: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'
+      icon: 'fas fa-graduation-cap',
+      time: '🎓 2019',
+      date: 'Leader, Little Kites Community',
+      content: 'ST Thomas College HSS, Thrissur'
     },
     {
-      icon: 'fas fa-campground',
-      time: '7:25 PM',
-      date: 'May 6',
-      content: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'
+      icon: 'fas fa-newspaper',
+      time: '📰 2020',
+      date: 'Elected School Editor',
+      content: 'ST Thomas College HSS, Thrissur'
     },
     {
-      icon: 'fas fa-sun',
-      time: '3:55 PM',
-      date: 'Apr 26',
-      content: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'
+      icon: 'fas fa-trophy',
+      time: '🏆 2024',
+      date: 'March',
+      content: 'Winner – First Hackathon\nNSS College of Engineering, Palakkad'
     },
     {
-      icon: 'fas fa-palette',
-      time: '5:24 PM',
-      date: 'Apr 12',
-      content: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'
+      icon: 'fas fa-rocket',
+      time: '🚀 2024',
+      date: 'October',
+      content: 'Global Nominee\nNASA Space Apps Challenge 2024'
     },
     {
-      icon: 'fas fa-laugh-beam',
-      time: '11:25 AM',
-      date: 'Apr 11',
-      content: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'
+      icon: 'fas fa-trophy',
+      time: '🏆 2025',
+      date: 'February',
+      content: 'Winner – Kochi Hackathon 2025'
     },
     {
-      icon: 'fas fa-pizza-slice',
-      time: '12:30 PM',
-      date: 'Apr 5',
-      content: 'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.'
+      icon: 'fas fa-bolt',
+      time: '⚡ 2025',
+      date: 'February 2025 – February 2026',
+      content: 'Join Secretary\nIEEE NSSCE Student Branch'
+    },
+    {
+      icon: 'fas fa-robot',
+      time: '🤖 2025',
+      date: 'February 2025 – February 2026',
+      content: 'Vice Chair\nIEEE Robotics and Automation Society\nNSSCE Student Branch Chapter'
+    },
+    {
+      icon: 'fas fa-globe',
+      time: '🌍 2025',
+      date: 'March 2025 – February 2026',
+      content: 'Webmaster\nIEEE Power & Energy Society\nKerala Section'
+    },
+    {
+      icon: 'fas fa-briefcase',
+      time: '💼 2025',
+      date: 'August',
+      content: 'Started Internship at Hawr Learn\n\nContributed to:\n• Web platform development\n• AI-powered English learning solutions\n• Educational edge-device development\n• Child-focused conversational learning systems\n• Grammar and pronunciation assistance'
+    },
+    {
+      icon: 'fas fa-trophy',
+      time: '🏆 2025',
+      date: 'October',
+      content: 'Winner – Regen Hackathon\nCollege of Engineering Kalloopara'
+    },
+    {
+      icon: 'fas fa-bolt',
+      time: '⚡ 2026',
+      date: 'February',
+      content: 'Secretary\nIEEE NSSCE Student Branch'
+    },
+    {
+      icon: 'fas fa-robot',
+      time: '🤖 2026',
+      date: 'February',
+      content: 'Chair\nIEEE Robotics and Automation Society\nNSSCE Student Branch Chapter'
     }
   ];
 
@@ -141,7 +182,7 @@ const Timeline = () => {
                 <i className={`${item.icon} text-2xl mb-3`}></i>
                 <h4>{item.time}</h4>
                 <p className="small text-white/50 mb-4">{item.date}</p>
-                <p className="text-[var(--light)] font-['poppins'] font-medium">{item.content}</p>
+                <p className="text-[var(--light)] font-['poppins'] font-medium whitespace-pre-line">{item.content}</p>
               </div>
             </div>
           </div>
@@ -157,7 +198,7 @@ const AboutTyper = () => {
     <div>
       <TypeAnimation
         sequence={[
-          'Hi,I\'m jovin.My expertise is to develop and maintain websites,apps & APIs to people around me and make their jobs more easy & efficient. ',
+          "Hi, I'm Jovin. I build intelligent software, embedded systems, and automation solutions that transform ideas into practical tools and real-world innovations.",
           5000,
         ]}
         wrapper="div"
@@ -224,42 +265,39 @@ const About = () => {
             <h1 className="text-center text-[var(--blue)] mb-8 lg:mb-12">MY SKILLS</h1>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto mb-8 lg:mb-12">
-          <div className="flex flex-col text-center min-h-[300px] text-[var(--light)] border-2 border-[var(--lightblue)] p-6 bg-[rgba(var(--dark),0.8)] rounded-[0.5rem] shadow-[0px_10px_20px_rgba(0,91,234,0.1),0px_30px_30px_rgba(212,212,222,0.1),0px_30px_40px_rgba(9,156,242,0)]" data-aos="fade-right" data-aos-duration="900">
-            <h4 className="text-xl font-bold mb-6">Development</h4>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-8 lg:mb-12">
+          {/* Card 1: Development */}
+          <div className="flex flex-col text-center min-h-[300px] text-[var(--light)] border-2 border-[var(--lightblue)] p-6 bg-[rgba(var(--dark),0.8)] rounded-[0.5rem] shadow-[0px_10px_20px_rgba(0,91,234,0.1),0px_30px_30px_rgba(212,212,222,0.1)] animate-fade" data-aos="fade-right" data-aos-duration="900">
+            <h4 className="text-xl font-bold mb-6 font-mono text-[var(--blue)]">Development</h4>
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <CircleProgress iconclass="fa-solid fa-globe" title="WEB" percent={75} />
-              <CircleProgress iconclass="fa-solid fa-mobile-screen-button" title="APPS" percent={20} />
-              <CircleProgress iconclass="fa-solid fa-gears" title="AI&ML" percent={0} />
+              <CircleProgress iconclass="fa-solid fa-globe" title="WEB" level="Extreme" />
+              <CircleProgress iconclass="fa-solid fa-mobile-screen-button" title="APPS" level="Moderate" />
+              <CircleProgress iconclass="fa-solid fa-brain" title="AI & ML" level="Moderate" />
             </div>
           </div>
 
-          <div className="flex flex-col text-center min-h-[300px] text-[var(--light)] border-2 border-[var(--lightblue)] p-6 bg-[rgba(var(--dark),0.8)] rounded-[0.5rem] shadow-[0px_10px_20px_rgba(0,91,234,0.1),0px_30px_30px_rgba(212,212,222,0.1),0px_30px_40px_rgba(9,156,242,0)]" data-aos="fade-left" data-aos-duration="900">
-            <h4 className="text-xl font-bold mb-6">Programming Languages</h4>
+          {/* Card 2: Programming & Technologies */}
+          <div className="lg:col-span-2 flex flex-col text-center min-h-[300px] text-[var(--light)] border-2 border-[var(--lightblue)] p-6 bg-[rgba(var(--dark),0.8)] rounded-[0.5rem] shadow-[0px_10px_20px_rgba(0,91,234,0.1),0px_30px_30px_rgba(212,212,222,0.1)]" data-aos="fade-up" data-aos-duration="900">
+            <h4 className="text-xl font-bold mb-6 font-mono text-[var(--blue)]">Programming & Technologies</h4>
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <CircleProgress iconclass="fa-solid fa-c" title="CPP" percent={0} />
-              <CircleProgress iconclass="fa-brands fa-js" title="JS" percent={0} />
-              <CircleProgress iconclass="fa-brands fa-python" title="PYTHON" percent={0} />
-              <CircleProgress iconclass="fa-brands fa-flutter" title="FLUTTER" percent={0} />
+              <CircleProgress iconclass="fa-brands fa-python" title="PYTHON" level="Efficient" />
+              <CircleProgress iconclass="fa-solid fa-c" title="C++" level="Efficient" />
+              <CircleProgress iconclass="fa-solid fa-code" title="C" level="Efficient" />
+              <CircleProgress iconclass="fa-brands fa-js" title="JS" level="Efficient" />
+              <CircleProgress iconclass="fa-solid fa-file-code" title="JSX" level="Efficient" />
+              <CircleProgress iconclass="fa-brands fa-react" title="React" level="Efficient" />
+              <CircleProgress iconclass="fa-brands fa-java" title="Java" level="Moderate" />
+              <CircleProgress iconclass="fa-brands fa-flutter" title="Flutter" level="Moderate" />
             </div>
           </div>
 
-          <div className="flex flex-col text-center min-h-[300px] text-[var(--light)] border-2 border-[var(--lightblue)] p-6 bg-[rgba(var(--dark),0.8)] rounded-[0.5rem] shadow-[0px_10px_20px_rgba(0,91,234,0.1),0px_30px_30px_rgba(212,212,222,0.1),0px_30px_40px_rgba(9,156,242,0)]" data-aos="fade-right" data-aos-duration="900">
-            <h4 className="text-xl font-bold mb-6">Frameworks</h4>
+          {/* Card 3: Languages I Can Speak */}
+          <div className="flex flex-col text-center min-h-[300px] text-[var(--light)] border-2 border-[var(--lightblue)] p-6 bg-[rgba(var(--dark),0.8)] rounded-[0.5rem] shadow-[0px_10px_20px_rgba(0,91,234,0.1),0px_30px_30px_rgba(212,212,222,0.1)]" data-aos="fade-left" data-aos-duration="900">
+            <h4 className="text-xl font-bold mb-6 font-mono text-[var(--blue)]">Languages I Can Speak</h4>
             <div className="flex flex-wrap justify-center items-center gap-4">
-              <CircleProgress iconclass="fa-brands fa-react" title="REACT" percent={0} />
-              <CircleProgress iconclass="fa-brands fa-bootstrap" title="Bootstrap" percent={0} />
-              <CircleProgress iconclass="fa-solid fa-database" title="DSA" percent={0} />
-              <CircleProgress iconclass="fa-brands fa-node-js" title="NODE" percent={0} />
-            </div>
-          </div>
-
-          <div className="flex flex-col text-center min-h-[300px] text-[var(--light)] border-2 border-[var(--lightblue)] p-6 bg-[rgba(var(--dark),0.8)] rounded-[0.5rem] shadow-[0px_10px_20px_rgba(0,91,234,0.1),0px_30px_30px_rgba(212,212,222,0.1),0px_30px_40px_rgba(9,156,242,0)]" data-aos="fade-left" data-aos-duration="900">
-            <h4 className="text-xl font-bold mb-6">Languages I Can Speak</h4>
-            <div className="flex flex-wrap justify-center items-center gap-4">
-              <CircleProgress iconclass="fa-solid fa-e" title="ENGLISH" percent={0} />
-              <CircleProgress iconclass="fa-solid fa-h" title="HINDI" percent={0} />
-              <CircleProgress iconclass="fa-solid fa-m" title="Malayalam" percent={0} />
+              <CircleProgress iconclass="fa-solid fa-language" title="Malayalam" level="Extreme" />
+              <CircleProgress iconclass="fa-solid fa-comments" title="ENGLISH" level="Efficient" />
+              <CircleProgress iconclass="fa-solid fa-language" title="HINDI" level="Moderate" />
             </div>
           </div>
         </div>

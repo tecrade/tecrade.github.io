@@ -6,7 +6,7 @@ const Typer = () => {
       sequence={[
         'DEVELOPER',
         1000,
-        'DESIGNER',
+        'DIY HOBBYIST',
         1000,
       ]}
       wrapper="span"
