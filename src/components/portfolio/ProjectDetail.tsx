@@ -313,7 +313,7 @@ const ProjectDetail: React.FC<ProjectDetailProps> = ({ repo, onBack }) => {
                     );
                   },
                   
-                  code({ className, children, ...props }) {
+                  code({ className, children}) {
                     const match = /language-(\w+)/.exec(className || '');
                     const isInline = !match;
                     const codeString = String(children).replace(/\n$/, '');
