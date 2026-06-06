@@ -1,38 +1,60 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tecrade</title>
-    <meta
-  name="description"
-  content="Portfolio of Jovin John (Tecrade), a developer and DIY hobbyist passionate about embedded systems, robotics, machine learning, automation, and web and mobile app development. Explore his projects, technical blogs, experiments, and engineering journey."
-/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <!-- 404 Hack -->
-    <script>
-(function(l) {
-  if (l.search[1] === '/' ) {
-    var decoded = l.search
-      .slice(1)
-      .split('&')
-      .map(function(s) {
-        return s.replace(/~and~/g, '&');
-      })
-      .join('?');
 
-    window.history.replaceState(
-      null,
-      null,
-      decoded + l.hash
-    );
-  }
-}(window.location));
-</script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jovin John (Tecrade) | Developer,Freelancer & DIY hobbyist</title>
+  <meta name="google-site-verification" content="3TbuIXdb6_eMvBP3U5_zyBhQu1morm40IjyNGkto2Fc" />
+  <meta name="description"
+    content="Portfolio of Jovin John (Tecrade), a developer and DIY hobbyist passionate about embedded systems, robotics, machine learning, automation, and web and mobile app development. Explore his projects, technical blogs, experiments, and engineering journey." />
+  <meta name="keywords"
+    content="Jovin John, Tecrade, Jovin John Portfolio, Tecrade Portfolio, Embedded Systems Developer, Robotics, AI, Machine Learning, Automation, Web Development, Mobile App Development, DIY , Prototyping, Kerala Developer, Kochi, India">
+  <meta name="author" content="Jovin John">
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large">
+
+  <!-- Social Media Tags -->
+  <meta property="og:title" content="Jovin John (Tecrade) | Developer,Freelancer & DIY hobbyist">
+  <meta property="og:description"
+    content="Portfolio of Jovin John (Tecrade), a developer passionate about embedded systems, robotics, machine learning, automation, and app development.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tecrade.github.io/">
+  <meta property="og:image" content="https://tecrade.github.io/images/profilepic.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Tecrade">
+  <meta property="og:locale" content="en_US">
+
+
+  <meta name="theme-color" content="#099cf2">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- 404 Hack -->
+  <script>
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search
+          .slice(1)
+          .split('&')
+          .map(function (s) {
+            return s.replace(/~and~/g, '&');
+          })
+          .join('?');
+
+        window.history.replaceState(
+          null,
+          null,
+          decoded + l.hash
+        );
+      }
+    }(window.location));
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
