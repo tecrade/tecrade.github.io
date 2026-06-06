@@ -4,8 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tecrade - Creative Developer Portfolio</title>
+    <title>Tecrade</title>
+    <meta
+  name="description"
+  content="Portfolio of Jovin John (Tecrade), a developer and DIY hobbyist passionate about embedded systems, robotics, machine learning, automation, and web and mobile app development. Explore his projects, technical blogs, experiments, and engineering journey."
+/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- 404 Hack -->
+    <script>
+(function(l) {
+  if (l.search[1] === '/' ) {
+    var decoded = l.search
+      .slice(1)
+      .split('&')
+      .map(function(s) {
+        return s.replace(/~and~/g, '&');
+      })
+      .join('?');
+
+    window.history.replaceState(
+      null,
+      null,
+      decoded + l.hash
+    );
+  }
+}(window.location));
+</script>
   </head>
   <body>
     <div id="root"></div>
