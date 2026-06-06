@@ -10,8 +10,8 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen">
-      <div className="container mx-auto px-4">
+    <div className="w-full md:min-h-screen flex items-center">
+      <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row items-center">
           <hr className="border-[var(--light)] opacity-20" />
 
@@ -42,7 +42,7 @@ const Banner = () => {
           {/* Right side - Picture */}
           <div className="w-full md:w-1/2">
             <div
-              className="h-[260px] w-[260px] sm:h-[360px] sm:w-[360px] md:h-[500px] md:w-[500px] border-0 border-[var(--light)] mx-auto mb-10 md:my-8 overflow-hidden rounded-lg"
+              className="h-[260px] w-[260px] sm:h-[360px] sm:w-[360px] md:h-[500px] md:w-[500px] border-0 border-[var(--light)] mx-auto mb-4 md:my-8 overflow-hidden rounded-lg"
               data-aos="zoom-in-left"
               data-aos-duration="1500"
             >
