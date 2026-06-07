@@ -452,7 +452,7 @@ const PortfolioCarousel: React.FC = () => {
                 <i className="fas fa-chevron-right text-sm" />
               </button>
             </div>
-px-
+            
             {/* ── Dot Indicators ── */}
             <div className="flex justify-center gap-2 mt-10">
               {repositories.map((_, i) => (
